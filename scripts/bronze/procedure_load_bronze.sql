@@ -24,7 +24,7 @@ Usage:
 CREATE OR REPLACE PROCEDURE bronze.load_bronze()
 LANGUAGE plpgsql
 AS $$
--- $$ marks the beginning and end of the procedure body.
+-- Dollar quoting marks the beginning and end of the procedure body.
 -- allowing single quotes inside the body to be used normally, without doubling them to escape them.
 
 DECLARE
