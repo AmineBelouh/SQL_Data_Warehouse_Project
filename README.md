@@ -31,6 +31,8 @@ This project involves:
 
 ## Building Layers  
 
+[Database Initialization](04_scripts/init_database.sql)
+
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into **Postgres** Database.  
   - [DDL Bronze Layer](04_scripts/1_bronze/ddl_bronze.sql)
   - [Procedure Load Bronze](04_scripts/1_bronze/procedure_load_bronze.sql)
