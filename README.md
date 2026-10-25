@@ -23,11 +23,11 @@ This project involves:
 
 ## Data Flow Diagram  
 
-![Data Flow](03_images/data_flow_diagram.png)  
+![Data Flow](03_images/Data_Flow_Diagram.png)  
 
 ## Data Model (Star Schema)  
 
-![Star Schema](03_images/star_schema_model.png)  
+![Star Schema](03_images/Star_Schema_Model.png)  
 
 ## Building Layers  
 
