@@ -53,8 +53,8 @@ SELECT
       pi.prd_id AS product_id, 
       pi.prd_key AS product_number, 
       pi.prd_nm AS product_name,  
-      pi.prd_line AS line, 
-      pi.prd_cat AS category_short, 
+      pi.prd_line AS product_line, 
+      pi.prd_cat AS category_id, 
       pc.cat AS category,
       pc.subcat AS subcategory,
       pc.maintenance AS maintenance,
@@ -63,7 +63,7 @@ SELECT
 FROM silver.crm_prd_info pi
 LEFT JOIN silver.erp_px_cat_g1v2 pc
 	ON pi.prd_cat = pc.id
-WHERE pi.prd_end_dt IS NULL  -- Filter out all historical data
+WHERE pi.prd_end_dt IS NULL;  -- Filter out all historical data
 
 -- =============================================================================
 -- Create Fact Table: gold.fact_sales
@@ -77,14 +77,13 @@ SELECT
 	c.customer_key,
 	p.product_key,
 	s.sls_order_dt AS order_date, 
-	s.sls_ship_dt AS ship_date, 
-	s.sls_due_dt AS due_date, 
-	s.sls_sales AS sales, 
+	s.sls_ship_dt AS shipping_date, 
+	s.sls_due_dt AS due_date,
+	s.sls_price AS price,
 	s.sls_quantity AS quantity, 
-	s.sls_price AS price
+	s.sls_sales AS sales_amount
 FROM silver.crm_sales_details s
 LEFT JOIN gold.dim_customers c
 	ON s.sls_cust_id = c.customer_id
 LEFT JOIN gold.dim_products p
 	ON s.sls_prd_key = p.product_number;
-ORDER BY pi.prd_key;
