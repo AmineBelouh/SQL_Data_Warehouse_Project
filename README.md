@@ -41,3 +41,5 @@ This project involves:
   - [Procedure Load Silver](04_scripts/2_silver/procedure_load_silver.sql)
 3. **Gold Layer**: Business-ready data, modeled into a star schema, required for reporting and analytics.
   - [DDL Gold Layer](04_scripts/3_gold/ddl_gold.sql)
+
+**Gold Layer Data Catalog:** [Data Catalog](02_docs/data_catalog.md)
