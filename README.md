@@ -31,12 +31,12 @@ This project involves:
 
 ## Building Layers  
 
-[Database Initialization](04_scripts/init_database.sql)
+**Initialize the database first:** [Database Initialization](04_scripts/init_database.sql)
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into **Postgres** Database.  
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into ***Postgres*** Database.  
   - [DDL Bronze Layer](04_scripts/1_bronze/ddl_bronze.sql)
-  - [Procedure Load Bronze](04_scripts/1_bronze/procedure_load_bronze.sql)
-2. **Silver Layer**: Includes data cleaning, standardization, and normalization processes to prepare data for analysis.
+  - [Procedure Load Bronze](04_scripts/1_bronze/procedure_load_bronze.sql) (Update the file paths in the procedure to match the location where you stored the CSV files on your own computer.)
+2. **Silver Layer**: Includes data cleaning processes to prepare data for analysis.
   - [DDL Silver Layer](04_scripts/2_silver/ddl_silver.sql)
   - [Procedure Load Silver](04_scripts/2_silver/procedure_load_silver.sql)
 3. **Gold Layer**: Business-ready data, modeled into a star schema, required for reporting and analytics.
