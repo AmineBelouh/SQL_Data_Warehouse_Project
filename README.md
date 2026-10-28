@@ -1,8 +1,6 @@
 # Data Warehouse and Analytics Project w/ PostgreSQL  
 Welcome to my Data Warehouse and Analytics Project repository! This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights.  
 
-
-
 ## Project Overview
 
 This project involves:  
@@ -42,4 +40,21 @@ This project involves:
 3. **Gold Layer**: Business-ready data, modeled into a star schema, required for reporting and analytics.
   - [DDL Gold Layer](04_scripts/3_gold/ddl_gold.sql)
 
-**Gold Layer Data Catalog:** [Data Catalog](02_docs/data_catalog.md)
+**Gold Layer Data Catalog:** [Data Catalog](02_docs/data_catalog.md)  
+
+---
+# Data Analysis  
+![Analytics_Roadmap](./03_images/Analytics_Roadmap.png)  
+
+## EDA  
+We try to understand all the aspects of our datasets.  
+
+1. [Database Exploration](./06_analysis/1_EDA/01_Database_Exploration.sql): Inspect the tables/views and columns available in the Gold schema. 
+
+2. [Dimensions Exploration](./06_analysis/1_EDA/02_Dimensions_Exploration.sql): Identify distinct values in dimension attributes and understand possible groupings and the granularity of the dimensions.  
+
+3. [Date Exploration](./06_analysis/1_EDA/03_Date_Exploration.sql): Identify date boundaries and understand the timespan of sales data and the birth-date range of customers.  
+
+4. [Measures Exploration](./06_analysis/1_EDA/04_Measures_Exploration.sql): Calculate key business metrics to establish a high-level overview of the business.  
+
+5. [Magnitude and Ranking Analysis](./06_analysis/1_EDA/05_Magnitude_Ranking_Analysis.sql): Compare business measures across products, categories, subcategories, and customer segments. Rank the results from highest to lowest.
